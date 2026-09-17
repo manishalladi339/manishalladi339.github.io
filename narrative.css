@@ -1,0 +1,138 @@
+.knowledge h2 {
+  margin-bottom: 20px;
+}
+
+.knowledge-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 55px;
+}
+
+.knowledge-card {
+  position: relative;
+  padding: 44px 40px;
+  border: 1px solid #393f57;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #1b2239, #15171f 75%);
+  overflow: hidden;
+}
+
+.knowledge-card.ai-card {
+  background: linear-gradient(145deg, #2a203c, #171820 75%);
+  border-color: #473c59;
+}
+
+.knowledge-card .eyebrow {
+  color: #a8bdff;
+  margin: 0 0 24px;
+}
+
+.knowledge-card.ai-card .eyebrow {
+  color: #ccb5f6;
+}
+
+.knowledge-card h3 {
+  max-width: 520px;
+  font-size: 30px;
+}
+
+.knowledge-card > p:not(.eyebrow) {
+  color: var(--muted);
+  margin: 20px 0 32px;
+  max-width: 600px;
+}
+
+.card-number {
+  position: absolute;
+  right: 28px;
+  top: 22px;
+  font: 54px/1 'Instrument Serif', Georgia, serif;
+  color: #ffffff0e;
+}
+
+.skill-groups {
+  border-top: 1px solid #ffffff14;
+}
+
+.skill-groups div {
+  display: grid;
+  grid-template-columns: 155px 1fr;
+  gap: 22px;
+  padding: 18px 0;
+  border-bottom: 1px solid #ffffff0d;
+}
+
+.skill-groups span {
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #a8bdff;
+}
+
+.ai-card .skill-groups span {
+  color: #ccb5f6;
+}
+
+.skill-groups p {
+  margin: 0;
+  color: #c2c5d0;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.contact h2 {
+  margin-bottom: 28px;
+}
+
+.contact-note {
+  max-width: 660px;
+  color: var(--muted);
+  font-size: 18px;
+  margin: 0 0 65px;
+}
+
+@media (max-width: 800px) {
+  .knowledge-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .knowledge-card {
+    padding: 34px 28px;
+  }
+
+  .skill-groups div {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+}
+
+@media (max-width: 560px) {
+  header nav a {
+    font-size: 0;
+  }
+
+  header nav a::before {
+    font-size: 12px;
+  }
+
+  header nav a[href="#knowledge"]::before {
+    content: 'Skills';
+  }
+
+  header nav a[href="#projects"]::before {
+    content: 'Projects';
+  }
+
+  header nav a[href="#contact"]::before {
+    content: 'Contact ↗';
+  }
+
+  .knowledge-card h3 {
+    font-size: 26px;
+  }
+
+  .contact-note {
+    font-size: 16px;
+  }
+}
